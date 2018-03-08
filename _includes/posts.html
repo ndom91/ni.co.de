@@ -1,0 +1,24 @@
+<br>
+<div class="posttlist">
+<ul>
+  {% for post in site.posts %}
+
+    <p id="{{ post.title }}">
+      <span class="postdate">{{ post.date | date_to_long_string }}</span><br>
+      <a class="posttitle" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><br>
+      <div class="postexcerpt">{{ post.excerpt | strip_html | truncatewords: 30 | normalize_whitespace }}</div>
+      {% if post.content contains site.excerpt_separator %}
+          <a class="readmorelink" href="{{ post.url | prepend: site.baseurl }}">...read more</a><br>
+      {% endif %}
+      <br><hr>
+    </p><br>
+  {% endfor %}
+</ul>
+</div>
+<div class="socials">
+  <span>
+    <a aria-label="Share Twitter" onClick="window.open('https://twitter.com/share?url=https%3A%2F%2Fiamnico.xyz&via=duqdom&related=linux&hashtags=sysadmin%2Clinux&text=Check%20out%20ndom91%27s%20linux%20admin%20blog%21','Share Twitter','menubar=no,toolbar=no,scrollbars=no,resizable,height=300,width=600'); return false;" target="_blank"><noscript><a href="https://twitter.com/share?url=https%3A%2F%2Fiamnico.xyz&via=duqdom&related=linux&hashtags=sysadmin%2Clinux&text=Check%20out%20ndom91%27s%20linux%20admin%20blog%21"></noscript><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
+    <a aria-label="Share Facebook" onClick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A//iamnico.xyz/&t=ndom91%20linux','Share Facebook','menubar=no,toolbar=no,scrollbars=no,resizable,height=400,width=600'); return false;" target="_blank"><noscript><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//iamnico.xyz/&t=ndom91%20linux"></noscript><i class="icon fa fa-facebook" aria-hidden="true"></i></a>
+    <a aria-label="Share E-Mail" target="_blank" href="mailto:?body=Check%20out%20ndom91%27s%20linux%20admin%20blog%21&subject=ndom91%27s%20linux%20%5Bmis%5Dadventures"><i class="icon fa fa-envelope" aria-hidden="true"></i></a>
+  </span>
+</div>

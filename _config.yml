@@ -1,0 +1,31 @@
+# Site settings
+title: ndom91 linux [mis]adventures
+#description: A blog about lorem ipsum dolor sit amet
+baseurl: "/particle" # the subpath of your site, e.g. /blog
+url: https://iamnico.xyz # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+
+# User settings
+username: Nico Domino
+user_description: Human | Sys Admin | Didn't ask for this
+user_title: SysAdmin
+email: yo@iamnico.xyz
+twitter_username: duqdom
+github_username: ndom91
+#gplus_username:  lorem_ipsum
+
+# Google-analytics
+google-analytics:
+  id: "UA-111339084-2"
+
+exclude: ['package.json', 'src' , 'node_modules']
+
+permalink: _posts/:year-:month-:day-:title.md.html
+
+excerpt_seperator: <!---excerpt--->
+# Jekyll reload command: sudo jekyll build --verbose --destination /var/www/html/particle --watch
+plugins:
+  - "disqus-for-jekyll"
+  
+disqus:
+  name: "iamnico-xyz" # required
+  noscript: "no script :(" # optional

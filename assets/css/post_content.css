@@ -12,7 +12,7 @@ a{
 a:hover {
   /* border-bottom: 3px dotted #b5e853; */
   text-decoration: none;
-  text-shadow:0 0 5px #63c0f5;
+  text-shadow:0 0 5px #b5e853;
 }
 .postheader{
   background:#1a222c;
@@ -169,10 +169,35 @@ h1,h2,h3,h4.contentdiv {
   max-width: 90%;
   white-space: normal !important;
 }
-a.footera:hover{
+.aboutt {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  padding: 0 80px;
+  display: block;
+}
+.abouthr {
+  width: inherit;
+  height: 1px;
+  border: 0;
+  border-top: 4px solid #b5e853;
+  margin: 15px auto;
+  padding: 15px;
+}
+.aboutpic {
+  display: inline;
+  width: 20%;
+  float:left;
+}
+.aboutpic > img {
+  border: 3px solid #b5e853;
+  border-radius: 50%;
+}
+.aboutdesc {
+  display: inline;
+  width: 70%;
   color: #fff;
-  border-bottom: 3px dotted #b5e853;
-  text-shadow: none;
+  font-family: Ubuntu;
+  float:right;
 }
 .sharetext{
   text-align:center;
@@ -180,10 +205,45 @@ a.footera:hover{
   font-family: Roboto Mono, monospace;
   font-weight: 100;
   font-size: 30px;
+  list-style-type: none;
+  display: inline-block;
+  width: 100%;
+  margin: 50px 0;
 }
 .socials{
   text-align: center;
-  margin: 0 0 50px 0;
+  margin: 0 auto 10px auto;
+  display: inline;
+  max-width: 50%;
+  white-space: none;
+}
+.prevpostspan {
+  display: inline;
+}
+.nextpostspan {
+  display: inline;
+}
+.prevvpost {
+  text-decoration: none;
+  font-family: monospace;
+  font-weight: 100;
+  color: #fff;
+  list-style-type: none;
+}
+a.prevvpost:hover {
+  text-shadow: none;
+  font-weight: 300;
+}
+.nexttpost {
+  text-decoration: none;
+  font-family: monospace;
+  font-weight: 100;
+  color: #fff;
+  list-style-type: none;
+}
+a.nexttpost:hover {
+  text-shadow: none;
+  font-weight: 300;
 }
 .fa {
   padding: 20px;
@@ -214,14 +274,17 @@ a.footera:hover{
 .fa-facebook:hover {
   background: #576a93;
   text-shadow: none;
+  cursor: pointer;
 }
 .fa-twitter:hover {
   background: #8cc6f2;
   text-shadow: none;
+  cursor: pointer;
 }
 .fa-envelope:hover {
   background: #cce0a6;
   text-shadow: none;
+  cursor: pointer;
 }
 .twitter-tweet{
   margin: auto;
@@ -229,6 +292,11 @@ a.footera:hover{
 #disqus_thread {
   max-width: 70%;
   margin: 20px auto 130px;
+}
+a.footera:hover{
+  color: #fff;
+  border-bottom: 1px dotted #fff;
+  text-shadow: none;
 }
 @media only screen and (max-width: 1000px) and (min-width: 551px){
   .contentdiv {
@@ -282,15 +350,47 @@ img {
   max-width: 120%;
   white-space: normal !important;
 }
+.aboutt {
+  display: inline-block;
+  margin: 0 auto 30px;
+}
+.aboutpic {
+  display: inline-block;
+  width: 100%;
+}
+.aboutdesc {
+  display: inline-block;
+  width: 100%;
+  padding: 40px 0 0 0;
+}
+.sharetext{
+  display: inline-block;
+  margin: 30px 0;
+}
+.fa {
+  padding: 15px;
+  font-size: 24px;
+  margin: 30px 0;
+}
+.prevvpost {
+  font-size: 16px;
+  color: #fff;
+  display: block;
+}
+.nexttpost {
+  font-size: 16px;
+  color: #fff;
+  display: block;
+}
 .footer {
-  font-size: 14px;
+  font-size: 12px;
 }
 a.footera{
-  font-size: 14px;
+  font-size: 12px;
 }
 a.footera:hover{
   color: #fff;
-  border-bottom: 3px dotted #b5e853;
+  border-bottom: 1px dotted #fff;
   text-shadow: none;
 }
 }

@@ -25,7 +25,19 @@ excerpt_seperator: <!---excerpt--->
 # Jekyll reload command: sudo jekyll build --verbose --destination /var/www/html/particle --watch
 plugins:
   - "disqus-for-jekyll"
-  
+  - "jekyll-paginate-v2"
+
+blogid: "#blog"
+
+pagination:
+  enabled: true
+  per_page: 6
+  permalink: '/page/:num/'
+  title_suffix: ' - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
 disqus:
   name: "iamnico-xyz" # required
   noscript: "no script :(" # optional

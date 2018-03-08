@@ -1,7 +1,7 @@
 <br>
 <div class="posttlist">
-<ul >
-  {% for post in paginator.posts %}
+<ul>
+  {% for post in site.posts %}
 
     <p id="{{ post.title }}">
       <span class="postdate">{{ post.date | date_to_long_string }}</span><br>
@@ -14,27 +14,11 @@
     </p><br>
   {% endfor %}
 </ul>
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="">
-        <a class="previous" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}#blog"><span>&larr; Newer Posts</span></a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="">
-        <a class="next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}#blog"><span>Older Posts &rarr;</span></a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
-
-</div><br><br>
+</div>
 <div class="socials">
   <span>
     <a aria-label="Share Twitter" onClick="window.open('https://twitter.com/share?url=https%3A%2F%2Fiamnico.xyz&via=duqdom&related=linux&hashtags=sysadmin%2Clinux&text=Check%20out%20ndom91%27s%20linux%20admin%20blog%21','Share Twitter','menubar=no,toolbar=no,scrollbars=no,resizable,height=300,width=600'); return false;" target="_blank"><noscript><a href="https://twitter.com/share?url=https%3A%2F%2Fiamnico.xyz&via=duqdom&related=linux&hashtags=sysadmin%2Clinux&text=Check%20out%20ndom91%27s%20linux%20admin%20blog%21"></noscript><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
     <a aria-label="Share Facebook" onClick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A//iamnico.xyz/&t=ndom91%20linux','Share Facebook','menubar=no,toolbar=no,scrollbars=no,resizable,height=400,width=600'); return false;" target="_blank"><noscript><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//iamnico.xyz/&t=ndom91%20linux"></noscript><i class="icon fa fa-facebook" aria-hidden="true"></i></a>
-    <a aria-label="Share E-Mail" target="_blank" href="mailto:?body=Hey%20Friend%2C%0D%0A%0D%0ACheck%20out%20ndom91%27s%20linux%20admin%20blog%21%0D%0A%0D%0Ahttps%3A%2F%2Fiamnico.xyz%2F&subject=ndom91%27s%20linux%20%5Bmis%5Dadventures"><i class="icon fa fa-envelope" aria-hidden="true"></i></a>
-    <a aria-label="Subscribe RSS" target="_blank" href="{{ "/feed.xml" | relative_url }}"><i class="icon fa fa-rss" aria-hidden="true"></i></a>
+    <a aria-label="Share E-Mail" target="_blank" href="mailto:?body=Check%20out%20ndom91%27s%20linux%20admin%20blog%21&subject=ndom91%27s%20linux%20%5Bmis%5Dadventures"><i class="icon fa fa-envelope" aria-hidden="true"></i></a>
   </span>
 </div>

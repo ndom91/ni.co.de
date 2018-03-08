@@ -50,6 +50,41 @@ p.user-details-p {
   border-bottom: 3px dotted #3a405a;
   text-decoration: none;
 }
+.pager {
+  margin: 0 10px 100px -20px;
+}
+.next:hover {
+  background-color: #4d6077;
+}
+.previous:hover {
+  background-color: #4d6077;
+}
+.next{
+  float: right;
+  background-color: #1a222c;
+  border: none;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  font-family: Roboto Mono;
+  font-size: 16px;
+  margin: 10px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.previous {
+  float: left;
+  background-color: #1a222c;
+  border: none;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  font-family: Roboto Mono;
+  font-size: 16px;
+  margin: 10px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
 .socials{
   text-align: center;
   width: 100%;
@@ -80,16 +115,28 @@ span .fa-envelope {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
+span .fa-rss {
+  background: #ef651a;
+  color: white;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
 span .fa-facebook:hover {
   background: #576a93;
   text-shadow: none;
+  cursor: pointer;
 }
 span .fa-twitter:hover {
   background: #8cc6f2;
   text-shadow: none;
+  cursor: pointer;
 }
 span .fa-envelope:hover {
   background: #cce0a6;
+  text-shadow: none;
+}
+span .fa-rss:hover {
+  background: #e29b76;
   text-shadow: none;
 }
 @media only screen and (max-width: 1000px) and (min-width: 551px){
@@ -128,5 +175,18 @@ span .fa-envelope:hover {
   }
   .footer{
     font-size: 12px;
+  }
+  .pager {
+    margin: 0px 10px 100px -30px;
+  }
+  .next {
+    padding: 15px;
+    font-size: 14px;
+    margin: 5px;
+  }
+  .previous {
+    padding: 15px;
+    font-size: 14px;
+    margin: 5px;
   }
 }

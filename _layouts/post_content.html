@@ -9,7 +9,7 @@
     <div class="aboutt">
       <hr class="abouthr">
       <span class="aboutpic">
-        <img src="../assets/img/avatar.jpg"></img>
+        <div class="picswitch"></div>
       </span>
       <span class="aboutdesc">
         Nico is a sys admin at a data center company in Frankfurt, Germany. He's picked up linux administration a while back and would like to document his work somewhere to help others and who knows, maybe this will even come in handy for himself one day!
@@ -24,7 +24,7 @@
     <span class="socials">
       <a aria-label="Share Twitter" onClick="window.open('https://twitter.com/share?url=https%3A%2F%2Fiamnico.xyz%2F%23{{ page.title | uri_escape }}&via=duqdom&related=linux&hashtags=sysadmin%2Clinux&text=Check%20out%20ndom91%27s%20page%20on%20{{ page.title }}%21','Share Twitter','menubar=no,toolbar=no,scrollbars=no,resizable,height=300,width=600'); return false;" target="_blank"><noscript><a target="_blank" href="https://twitter.com/share?url=https%3A%2F%2Fiamnico.xyz%2F%23{{ page.title | uri_escape }}&via=duqdom&related=linux&hashtags=sysadmin%2Clinux&text=Check%20out%20ndom91%27s%20page%20on%20{{ page.title }}%21"></noscript><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
       <a aria-label="Share Facebook" onClick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A//iamnico.xyz/%23{{ page.title | uri_escape }}&t=ndom91%20linux','Facebook Share','menubar=no,toolbar=no,scrollbars=no,resizable,height=400,width=600'); return false;" target="_blank"><noscript><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//iamnico.xyz/%23{{ page.title | uri_escape }}&t=ndom91%20linux"></noscript><i class="icon fa fa-facebook" aria-hidden="true"></i></a>
-      <a aria-label="Share E-Mail" target="_blank" href="mailto:?body=Hey+Friend%2C%0D%0A%0D%0ACheck%20out%20ndom91%27s%20linux%20admin%20blog%21%0D%0A%0D%0AThis%20post%20is%20about%20{{ page.title }}.%0D%0A%0D%0Ahttps%3A%2F%2Fiamnico.xyz%2F%23{{ page.title | uri_escape }}&subject=ndom91%27s%20linux%20%5Bmis%5Dadventures%20-%20{{ page.title }}"><i class="icon fa fa-envelope" aria-hidden="true"></i></a>
+      <a aria-label="Share E-Mail" target="_blank" href="mailto:?body=Hey+Friend%2C%0D%0A%0D%0ACheck%20out%20ndom91%27s%20linux%20admin%20blog%21%0D%0A%0D%0AThis%20post%20is%20about%20{{ page.title }}.%0D%0A%0D%0Ahttps%3A%2F%2Fiamnico.xyz%2F%23{{ page.title | uri_escape }}&subject=ndom91%27s%20linux%20%5Bmis%5Dadventures%20-%20{{ page.title }}"><i class="icon fa fa-at"></i></a>
     </span>
     <span class="nextpostspan">
         {% if page.next.url %}

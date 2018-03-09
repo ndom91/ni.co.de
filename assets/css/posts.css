@@ -109,7 +109,7 @@ span .fa-twitter {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
-span .fa-envelope {
+span .fa-at {
   background: #b5e853;
   color: white;
   -webkit-transition-duration: 0.4s; /* Safari */
@@ -131,7 +131,7 @@ span .fa-twitter:hover {
   text-shadow: none;
   cursor: pointer;
 }
-span .fa-envelope:hover {
+span .fa-at:hover {
   background: #cce0a6;
   text-shadow: none;
 }

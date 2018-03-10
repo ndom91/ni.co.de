@@ -5,10 +5,6 @@ date:   2018-02-25 16:16:01 -0600
 comments: true
 excerpt_separator: <!---excerpt--->
 ---
-
-
-<br>
-
 ![bash](../assets/img/gnubash_logo_transparent.png)
 
 <br>

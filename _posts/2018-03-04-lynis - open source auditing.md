@@ -7,8 +7,6 @@ excerpt_separator: <!---excerpt--->
 ---
 
 
-<br>
-
 So you’ve got your system up and running the way you like it, but your wondering what else can I do to harden my server?
 
 Lynis to the rescue!

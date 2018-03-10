@@ -6,11 +6,6 @@ comments: true
 excerpt_separator: <!---excerpt--->
 ---
 
-<br>
-{% man 1 ssh-keygen Ubuntu %}<br>
-{% man 1 ssh Ubuntu %}
-<br>
-
 Generating a new SSH key
 
 <div class="codeblok">{% highlight shell linenos %}
@@ -53,3 +48,8 @@ sudo mv ~/Documents/id_rsa.pub ~/.ssh/authorized_keys
 Then on your client simply using the matching id_rsa or id_rsa.ppk file and your good!
 
 Now this may seem simple, but I’ve had problems with permissions for these files for hours once at the beginning. A little tip – authorized_keys should be chmod 600 and .ssh chmod 700. Therefore only the owning user can read and write them. Sshd seems to be picky about this..
+
+<br>
+{% man 1 ssh-keygen Ubuntu %}<br>
+{% man 1 ssh Ubuntu %}
+<br>

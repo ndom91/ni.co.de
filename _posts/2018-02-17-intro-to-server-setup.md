@@ -6,7 +6,6 @@ comments: true
 excerpt_separator: <!---excerpt--->
 ---
 
-<br>
 ![ubuntu splash](../assets/img/ubuntu16-04_tw_kevin.png)
 <br>
 Here’s where one lands directly after the installation of a fresh linux distro. In my case Ubuntu 16.04. SSH into your machine with your favorite client [Win 32/64: [putty](https://www.putty.org/)]

@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include post_head.html content=page.title content2=page.date content3=page.excerpt content4=paginator.page %}
+  {% include post_head.html  content3=page.excerpt content4=paginator.page %}
   <body>
 
     <div class="contentdiv">
+    <div class="post_date">
+        {{ page.date | date_to_long_string }}
+      </div>
+      <div class="post_title">
+        {{ page.title }}
+      </div>
       {{ content }}
     </div>
     <div class="aboutt">

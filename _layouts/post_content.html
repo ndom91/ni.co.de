@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include post_head.html  content3=page.excerpt content4=paginator.page %}
-  <body>
-
+  <body >
+    <canvas id="map" width="200" height="729" style="cursor: crosshair; width: 200px; height: 729.876px;"></canvas>
     <div class="contentdiv">
     <div class="post_date">
         {{ page.date | date_to_long_string }}
@@ -38,8 +38,14 @@
         {% endif %}
     </span>
     </div>
-  </body>
 
+  <script>
+    pagemap(document.querySelector('#map'),{
+    viewport: null,
+    interval: null
+    });
+  </script>
+</body>
 <br>
 {% if page.comments %}
   <div id="disqus_thread"></div>

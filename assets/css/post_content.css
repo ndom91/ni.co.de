@@ -53,6 +53,13 @@ display: block;
 margin-left: auto;
 margin-right: auto;
 }
+.imgshadow {
+  max-width: 650px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 5px #222;
+}
 .contenttitle {
   display: inline;
   margin-left: 0;
@@ -374,13 +381,13 @@ a.footera:hover{
   .contentdiv {
     padding: 80px 70px 50px 70px;
   }
-  img {
+img {
   max-width: 550px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  }
-  .codeblok{
+}
+.codeblok{
     overflow-y: auto;
     max-width: 120%;
     white-space: normal !important;

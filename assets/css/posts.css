@@ -189,4 +189,10 @@ span .fa-rss:hover {
     font-size: 14px;
     margin: 5px;
   }
+  .fa-linkedin {
+    display: none;
+  }
+  .header {
+    margin: -50px auto;
+  }
 }

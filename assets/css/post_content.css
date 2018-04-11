@@ -74,14 +74,14 @@ margin-right: auto;
   font-size: 16px;
 }
 h1,h2,h3,h4 {
-  color: #000;
+  color: var(--textcolor);
 }
 /* 393d3f; */
 .nav {
   height: 60px;
   width: 100%;
   background-color: var(--nav);
-  position: relative;
+  position: fixed;
 }
 .nav > .nav-header {
   display: inline;
@@ -133,9 +133,9 @@ h1,h2,h3,h4 {
 #map {
     position: fixed;
     top: 70px;
-    right: 50px;
-    width: 200px;
+    right: 20px;
     height: 100%;
+    max-width: 150px;
     z-index: 100;
 }
 .post_date {
@@ -220,10 +220,21 @@ h1,h2,h3,h4 {
 table {
     font-size: 14px;
 }
+pre {
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
 .codeblok{
   overflow-y: auto;
   max-width: 90%;
-  white-space: normal !important;
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 .aboutt {
   max-width: 700px;
@@ -247,21 +258,23 @@ table {
   margin-left: 10px;
 }
 .picswitch{
-  background-image:url('../img/avatar5.jpg');
+  position:relative;
+}
+.picswitch img {
+  position:absolute;
+  left:0;
   border: 4px solid var(--pic);
   border-radius: 50%;
   height: 150px;
   width: 150px;
-  -webkit-transition-duration: 1s; /* Safari */
-  transition-timing-function: ease-in-out;
-  transition-duration: 1s;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
-.picswitch:hover {
-  background-image:url('../img/avatar.jpg');
+.picswitch img.top:hover {
+  opacity:0;
   box-shadow: 0 0 20px var(--pic);
-  transition-timing-function: ease-in-out;
-  -webkit-transition-duration: 1s; /* Safari */
-  transition-duration: 1s;
 }
 .aboutdesc {
   display: inline;
@@ -378,9 +391,12 @@ a.footera:hover{
   text-shadow: none;
 }
 @media only screen and (max-width: 1000px) and (min-width: 551px){
-  .contentdiv {
-    padding: 80px 70px 50px 70px;
-  }
+#map {
+  display: none;
+}
+.contentdiv {
+  padding: 80px 70px 50px 70px;
+}
 img {
   max-width: 550px;
   display: block;

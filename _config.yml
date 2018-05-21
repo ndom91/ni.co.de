@@ -1,13 +1,19 @@
 # Site settings
-title: ndom91 linux [mis]adventures
+
+title: ndom91 [mis]adventures
+
 #description: A blog about lorem ipsum dolor sit amet
 baseurl: "/particle" # the subpath of your site, e.g. /blog
 url: https://iamnico.xyz # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
+# Jekyll reload command:
+#
+#      sudo jekyll build --verbose --destination /var/www/html/particle --watch
+
 # User settings
 username: Nico Domino
 user_description: Human | Sys Admin | Didn't ask for this
-user_title: SysAdmin
+user_title: IT System Admin
 email: yo@iamnico.xyz
 twitter_username: duqdom
 github_username: ndom91
@@ -22,7 +28,7 @@ exclude: ['package.json', 'src' , 'node_modules']
 permalink: _posts/:year-:month-:day-:title.md.html
 
 excerpt_seperator: <!---excerpt--->
-# Jekyll reload command: sudo jekyll build --verbose --destination /var/www/html/particle --watch
+
 plugins:
   - "disqus-for-jekyll"
   - "jekyll-paginate-v2"

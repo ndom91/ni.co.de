@@ -71,8 +71,8 @@
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": true,
-        "mode": "bubble"
+        "enable": false,
+        "mode": "repulse"
       },
       "onclick": {
         "enable": true,
@@ -89,7 +89,7 @@
       },
       "bubble": {
         "distance": 273.25345500012406,
-        "size": 12,
+        "size": 3.5,
         "duration": 1.4076693136370029,
         "opacity": 0.09108448500004136,
         "speed": 3

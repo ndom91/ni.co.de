@@ -1,9 +1,9 @@
 # Particle Jekyll Theme
 
-### heavily edited by ndom91 
+### Implemented Particle Jekyll Theme version by ndom91 
 
 
-![](./particle.jpg)
+![](./iamnico_home200518.png)
 
 This is a simple and minimalist template for Jekyll designed for developers that want to show of their portfolio.
 

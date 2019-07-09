@@ -5,12 +5,14 @@ jobs:
   build:
     <<: *defaults
     docker:
-      - image: starefossen/ruby-node:latest
+      - image: circleci/ruby:2.6.0-node
+      # - image: starefossen/ruby-node:latest
       # - image: circleci/ruby:2.5
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
     environment:
+      BUNDLER_VERSION: 2.0.1
       BUNDLE_PATH: ~/repo/bundle
     steps:
       - checkout

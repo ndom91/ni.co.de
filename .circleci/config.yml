@@ -68,8 +68,8 @@ jobs:
       - run: 
           name: rsync to ndo7:/var/www/html/nicode
           command: |
-            ssh -p 2424 ndo@7.ndo.dev "rm -r /home/ndo/ni.co.de-deploy/*"
-            rsync -av -e "ssh -p 2424" --delete /home/circleci/_site/* ndo@7.ndo.dev:/home/ndo/ni.co.de-deploy/
+            ssh -p 2424 ndo@7.ndo.dev "rm -r /var/www/html/nicode/*"
+            rsync -av -e "ssh -p 2424" --delete /home/circleci/_site/* ndo@7.ndo.dev:/var/www/html/nicode
 workflows:
   version: 2
   test-deploy:

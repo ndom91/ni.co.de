@@ -3,7 +3,7 @@
 title: ndom91 [mis]adventures
 
 #description: A blog about lorem ipsum dolor sit amet
-baseurl: "/particle" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: https://iamnico.xyz # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # Jekyll reload command:
@@ -12,12 +12,11 @@ url: https://iamnico.xyz # the base hostname & protocol for your site e.g. http:
 
 # User settings
 username: Nico Domino
-user_description: Human | Sys Admin | Didn't ask for this
-user_title: IT System Admin
-email: yo@iamnico.xyz
-twitter_username: duqdom
+user_description: Web Dev
+user_title: Web Dev
+email: yo@ni.co.de
+twitter_username: ndom91
 github_username: ndom91
-#gplus_username:  lorem_ipsum
 
 # Google-analytics
 google-analytics:
@@ -44,6 +43,6 @@ pagination:
   sort_field: 'date'
   sort_reverse: true
 
-disqus:
-  name: "iamnico-xyz" # required
-  noscript: "no script :(" # optional
+# disqus:
+  # name: "iamnico-xyz" # required
+  # noscript: "no script :(" # optional

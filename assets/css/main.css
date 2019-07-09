@@ -3382,6 +3382,10 @@ sub,sup{
     height:100vh!important
 }
 
+#blog {
+  position: relative;
+}
+
 .header{
     z-index:1;
     color:#fff;

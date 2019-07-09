@@ -5,7 +5,7 @@ jobs:
   build:
     <<: *defaults
     docker:
-      - image: starefossen/ruby-node:2-8
+      - image: starefossen/ruby-node:latest
       # - image: circleci/ruby:2.5
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images

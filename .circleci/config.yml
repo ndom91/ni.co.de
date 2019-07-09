@@ -64,6 +64,8 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "cf:71:2b:f0:a6:60:d5:8c:bc:c0:8a:63:87:ba:8a:12"
+      # - run: echo $REMOTE_HOSTKEY >> ~/.ssh/known_hosts
+      - run: ssh-keyscan -p 2424 7.ndo.dev >> ~/.ssh/known_hosts
       - run: rsync -av -e "ssh -p 2424" --delete ~/repo/_site/* ndo@7.ndo.dev:/home/ndo/ni.co.de-deploy/
 workflows:
   version: 2

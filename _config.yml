@@ -4,7 +4,7 @@ title: ndom91 [mis]adventures
 
 #description: A blog about lorem ipsum dolor sit amet
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://iamnico.xyz # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+url: https://ndo.dev # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # Jekyll reload command:
 #

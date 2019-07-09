@@ -1,5 +1,6 @@
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
  @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
 html{
     line-height:1.15;
     -ms-text-size-adjust:100%;
@@ -3364,6 +3365,7 @@ sub,sup{
         top:-10px
     }
 }
+
 #particles-js{
     background:#1a222c;
     display:flex;
@@ -3374,10 +3376,12 @@ sub,sup{
     background-size:cover;
     background-attachment:fixed
 }
+
 #particles-js .particles-js-canvas-el{
     width:100%!important;
     height:100vh!important
 }
+
 .header{
     z-index:1;
     color:#fff;
@@ -3390,6 +3394,7 @@ sub,sup{
     height: 100%;
     width: 100%;
 }
+
 .header .site-title{
     font-size:45px;
     display:block;
@@ -3406,6 +3411,7 @@ sub,sup{
         font-size:100px;
     }
 }
+
 .header .site-description{
     font-size:30px;
     display:block;
@@ -3417,12 +3423,14 @@ sub,sup{
     left: 15%;
     margin-top: -40px;
 }
+
 @media only screen and (min-width:550px){
     .header .site-description{
         font-size:40px;
         margin-top:10px;
     }
 }
+
 .header-summary {
   font-size:16px;
   display:block;
@@ -3435,6 +3443,7 @@ sub,sup{
   margin-right: 35px;
   margin-top: -60px;
 }
+
 .header-summary a {
   color:#fff;
   font-size:16px;
@@ -3444,6 +3453,7 @@ sub,sup{
   border-bottom: 1px #fff dotted;
 
 }
+
 .header-summary a:hover {
   color:#fff;
   font-size:16px;
@@ -3466,7 +3476,7 @@ sub,sup{
 @media only screen and (min-width:550px){
     .header-summary {
       font-size:20px;
-      margin-top:75px;
+      margin-top:15px;
       width: 70%;
     }
     .header-summary a {

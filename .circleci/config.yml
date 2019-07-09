@@ -70,6 +70,7 @@ jobs:
           command: |
             ssh -p 2424 ndo@7.ndo.dev "rm -r /var/www/html/nicode/*"
             rsync -av -e "ssh -p 2424" --delete /home/circleci/_site/* ndo@7.ndo.dev:/var/www/html/nicode
+            nginxreload
 workflows:
   version: 2
   test-deploy:

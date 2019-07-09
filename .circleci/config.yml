@@ -70,8 +70,8 @@ jobs:
       - run: ssh-keyscan -p 2424 7.ndo.dev >> ~/.ssh/known_hosts
       - attach_workspace:
           at: /home/circleci
-      - run: ls -lah /home/circleci 
-      - run: rsync -av -e "ssh -p 2424" --delete /home/circleci/repo/_site/* ndo@7.ndo.dev:/home/ndo/ni.co.de-deploy/
+      - run: ls -lah /home/circleci && ls -lah /home/circleci/_site
+      - run: rsync -av -e "ssh -p 2424" --delete /home/circleci/_site/* ndo@7.ndo.dev:/home/ndo/ni.co.de-deploy/
 workflows:
   version: 2
   test-deploy:

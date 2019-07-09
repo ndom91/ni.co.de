@@ -1,0 +1,74 @@
+defaults: &defaults
+  working_directory: ~/repo
+version: 2
+jobs:
+  build:
+    <<: *defaults
+    docker:
+      - image: starefossen/ruby-node:2-8
+      # - image: circleci/ruby:2.5
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+    environment:
+      BUNDLE_PATH: ~/repo/bundle
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v2-dependencies-{{ checksum "Gemfile.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - v2-dependencies-
+            # - rubygems-v1-{{ checksum "Gemfile.lock" }}
+            # - rubygems-v1-fallback
+      - run:
+          name: Bundle Install
+          command: bundle check || bundle install
+      - run:
+          name: Node Install
+          command: npm install 
+      - save_cache:
+          key: v2-dependencies-{{ checksum "Gemfile.lock" }}
+          # key: rubygems-v1-{{ checksum "Gemfile.lock" }}
+          paths:
+            - ~/bundle
+            - ~/node_modules
+      - run:
+          name: Jekyll build
+          command: bundle exec jekyll build --verbose
+      - run:
+          name: HTMLProofer tests
+          command: |
+            bundle exec htmlproofer ./_site \
+              --allow-hash-href \
+              --check-favicon  \
+              --check-html \
+              --disable-external
+  deploy:
+    <<: *defaults
+    docker:
+      - image: cibuilds/jekyll:latest
+    working_directory: ~/repo
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: rsync to ndo7
+          command: apk update && apk add rsync
+      - add_ssh_keys:
+          fingerprints:
+            - "cf:71:2b:f0:a6:60:d5:8c:bc:c0:8a:63:87:ba:8a:12"
+      - run: rsync -av --delete ~/repo/ ndo@7.ndo.dev:/home/ndo/ni.co.de-deploy
+workflows:
+  version: 2
+  test-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master

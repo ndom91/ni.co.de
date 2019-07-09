@@ -28,11 +28,12 @@ jobs:
       - run:
           name: Bundle Install
           command: |
+            pwd
             gem install bundler
             bundle check || bundle install
       - run:
           name: Node Install
-          command: npm install 
+          command: pwd && npm install 
       - save_cache:
           # key: v2-dependencies-{{ checksum "Gemfile.lock" }}
           key: rubygems-v1-{{ checksum "Gemfile.lock" }}
@@ -60,7 +61,7 @@ jobs:
           at: ./
       - run:
           name: rsync to ndo7
-          command: apk update && apk add rsync
+          command: pwd && apk update && apk add rsync
       - add_ssh_keys:
           fingerprints:
             - "cf:71:2b:f0:a6:60:d5:8c:bc:c0:8a:63:87:ba:8a:12"

@@ -67,7 +67,9 @@ jobs:
           at: /home/circleci
       - run: 
           name: rsync to ndo7:/var/www/html/nicode
-          command: rsync -av -e "ssh -p 2424" --delete /home/circleci/_site/* ndo@7.ndo.dev:/home/ndo/ni.co.de-deploy/
+          command: |
+            ssh -p 2424 ndo@7.ndo.dev "rm -r /home/ndo/ni.co.de-deploy/*"
+            rsync -av -e "ssh -p 2424" --delete /home/circleci/_site/* ndo@7.ndo.dev:/home/ndo/ni.co.de-deploy/
 workflows:
   version: 2
   test-deploy:

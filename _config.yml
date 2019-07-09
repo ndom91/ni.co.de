@@ -22,7 +22,7 @@ github_username: ndom91
 google-analytics:
   id: "UA-111339084-2"
 
-exclude: ['package.json', 'src' , 'node_modules', 'vendor']
+exclude: ['package.json', 'src' , 'node_modules', 'vendor', 'bundle']
 
 permalink: _posts/:year-:month-:day-:title.md.html
 

@@ -6,25 +6,19 @@ jobs:
     <<: *defaults
     docker:
       - image: circleci/ruby:2.6.0-node
-      # - image: starefossen/ruby-node:latest
-      # - image: circleci/ruby:2.5
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
     environment:
       BUNDLER_VERSION: 2.0.1
       BUNDLE_PATH: ~/repo/bundle
     steps:
       - checkout
-
       # Download and cache dependencies
       - restore_cache:
           keys:
-            # - v2-dependencies-{{ checksum "Gemfile.lock" }}
+            - v2-dependencies-{{ checksum "Gemfile.lock" }}
             # fallback to using the latest cache if no exact match is found
-            # - v2-dependencies-
-            - rubygems-v1-{{ checksum "Gemfile.lock" }}
-            - rubygems-v1-fallback
+            - v2-dependencies-
+            # - rubygems-v1-{{ checksum "Gemfile.lock" }}
+            # - rubygems-v1-fallback
       - run:
           name: Bundle Install
           command: |
@@ -34,8 +28,8 @@ jobs:
           name: Node Install
           command: npm install 
       - save_cache:
-          # key: v2-dependencies-{{ checksum "Gemfile.lock" }}
-          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
+          key: v2-dependencies-{{ checksum "Gemfile.lock" }}
+          # key: rubygems-v1-{{ checksum "Gemfile.lock" }}
           paths:
             - ~/repo/bundle
             - ~/repo/node_modules
@@ -66,12 +60,14 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "cf:71:2b:f0:a6:60:d5:8c:bc:c0:8a:63:87:ba:8a:12"
-      # - run: echo $REMOTE_HOSTKEY >> ~/.ssh/known_hosts
-      - run: ssh-keyscan -p 2424 7.ndo.dev >> ~/.ssh/known_hosts
+      - run: 
+          name: ssh-keyscan ndo7
+          command: ssh-keyscan -p 2424 7.ndo.dev >> ~/.ssh/known_hosts
       - attach_workspace:
           at: /home/circleci
-      - run: ls -lah /home/circleci && ls -lah /home/circleci/_site
-      - run: rsync -av -e "ssh -p 2424" --delete /home/circleci/_site/* ndo@7.ndo.dev:/home/ndo/ni.co.de-deploy/
+      - run: 
+          name: rsync to ndo7:/var/www/html/nicode
+          command: rsync -av -e "ssh -p 2424" --delete /home/circleci/_site/* ndo@7.ndo.dev:/home/ndo/ni.co.de-deploy/
 workflows:
   version: 2
   test-deploy:

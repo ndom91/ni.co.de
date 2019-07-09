@@ -37,8 +37,8 @@ jobs:
           # key: v2-dependencies-{{ checksum "Gemfile.lock" }}
           key: rubygems-v1-{{ checksum "Gemfile.lock" }}
           paths:
-            - ~/bundle
-            - ~/node_modules
+            - ~/repo/bundle
+            - ~/repo/node_modules
       - run:
           name: Jekyll build
           command: bundle exec jekyll build --verbose
@@ -51,7 +51,7 @@ jobs:
               # --check-html \
               # --disable-external
       - persist_to_workspace:
-          root: /home/circleci
+          root: /home/circleci/repo
           paths:
             - _site/*
   deploy:

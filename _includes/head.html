@@ -29,6 +29,8 @@
   <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono|Space+Mono:400,700|Ubuntu+Mono|Roboto+Mono:100,300,300i,500|Overpass+Mono:300,400" rel="stylesheet">
   <meta name="theme-color" content="#1a222c" />
 
+  <script type="text/javascript" src="assets/js/simple-scrollbar.min.js" />
+
   <!-- FAVICONS -->
 
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://ndo.dev/img/favicons/apple-touch-icon-57x57.png" />
@@ -55,3 +57,7 @@
   <!-- /FAVICONS -->
 
 </head>
+<script>
+  var el = document.querySelector('body');
+  SimpleScrollbar.initEl(el);
+</script>

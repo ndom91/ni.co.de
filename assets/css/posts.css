@@ -27,6 +27,9 @@ p.user-details-p {
   text-decoration: none;
   color: #000000;
 }
+.posttitle:hover {
+font-weight: 700;
+}
 .postdate {
   margin: 0 20px;
   font-size: 14px;
@@ -47,17 +50,11 @@ p.user-details-p {
   font-weight:500;
 }
 .readmorelink:hover {
-  border-bottom: 3px dotted #3a405a;
+  border-bottom: 1px dotted #3a405a;
   text-decoration: none;
 }
 .pager {
   margin: 0 10px 100px -20px;
-}
-.next:hover {
-  background-color: #4d6077;
-}
-.previous:hover {
-  background-color: #4d6077;
 }
 .next{
   float: right;
@@ -69,8 +66,10 @@ p.user-details-p {
   font-family: Roboto Mono;
   font-size: 16px;
   margin: 10px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
+  transition: all 200ms linear;
+}
+.next:hover {
+  box-shadow: 0 0 15px 2px rgba(0,0,0,0.8);
 }
 .previous {
   float: left;
@@ -84,6 +83,9 @@ p.user-details-p {
   margin: 10px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
+}
+.previous:hover {
+  box-shadow: 0 0 15px 2px rgba(0,0,0,0.8);
 }
 .socials{
   text-align: center;

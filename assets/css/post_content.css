@@ -111,7 +111,6 @@ h1,h2,h3,h4 {
 .button {
   background-color: var(--button);
   border: none;
-  border-radius: 10%;
   color: var(--buttontext);
   padding: 6px 8px;
   text-decoration: none;
@@ -122,8 +121,6 @@ h1,h2,h3,h4 {
   transition-duration: 0.4s;
 }
 .button:hover {
-  background-color: var(--buttonhover);
-  color: white;
   border-bottom: none;
   text-shadow: none;
   drop-shadow: 0 0 20px #000;
